@@ -1,0 +1,765 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		B38410A22EA172DD00DEC4F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B384108C2EA172DB00DEC4F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38410932EA172DB00DEC4F4;
+			remoteInfo = eyeChat;
+		};
+		B38410AC2EA172DD00DEC4F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B384108C2EA172DB00DEC4F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38410932EA172DB00DEC4F4;
+			remoteInfo = eyeChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B38410C02EA173AE00DEC4F4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B38410CB2EA17AB100DEC4F4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B38410942EA172DB00DEC4F4 /* eyeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eyeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B38410A12EA172DD00DEC4F4 /* eyeChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eyeChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B38410AB2EA172DD00DEC4F4 /* eyeChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eyeChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B38410C22EA173AE00DEC4F4 /* eyeChat-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "eyeChat-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B38410CD2EA17AB100DEC4F4 /* eyeChatd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = eyeChatd; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B38410962EA172DB00DEC4F4 /* eyeChat */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = eyeChat;
+			sourceTree = "<group>";
+		};
+		B38410A42EA172DD00DEC4F4 /* eyeChatTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = eyeChatTests;
+			sourceTree = "<group>";
+		};
+		B38410AE2EA172DD00DEC4F4 /* eyeChatUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = eyeChatUITests;
+			sourceTree = "<group>";
+		};
+		B38410C32EA173AE00DEC4F4 /* eyeChat-cli */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "eyeChat-cli";
+			sourceTree = "<group>";
+		};
+		B38410CE2EA17AB100DEC4F4 /* eyeChatd */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = eyeChatd;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B38410912EA172DB00DEC4F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B384109E2EA172DD00DEC4F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38410A82EA172DD00DEC4F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38410BF2EA173AE00DEC4F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38410CA2EA17AB100DEC4F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B384108B2EA172DB00DEC4F4 = {
+			isa = PBXGroup;
+			children = (
+				B38410962EA172DB00DEC4F4 /* eyeChat */,
+				B38410A42EA172DD00DEC4F4 /* eyeChatTests */,
+				B38410AE2EA172DD00DEC4F4 /* eyeChatUITests */,
+				B38410C32EA173AE00DEC4F4 /* eyeChat-cli */,
+				B38410CE2EA17AB100DEC4F4 /* eyeChatd */,
+				B38410952EA172DB00DEC4F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B38410952EA172DB00DEC4F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B38410942EA172DB00DEC4F4 /* eyeChat.app */,
+				B38410A12EA172DD00DEC4F4 /* eyeChatTests.xctest */,
+				B38410AB2EA172DD00DEC4F4 /* eyeChatUITests.xctest */,
+				B38410C22EA173AE00DEC4F4 /* eyeChat-cli */,
+				B38410CD2EA17AB100DEC4F4 /* eyeChatd */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B38410932EA172DB00DEC4F4 /* eyeChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B38410B52EA172DD00DEC4F4 /* Build configuration list for PBXNativeTarget "eyeChat" */;
+			buildPhases = (
+				B38410902EA172DB00DEC4F4 /* Sources */,
+				B38410912EA172DB00DEC4F4 /* Frameworks */,
+				B38410922EA172DB00DEC4F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B38410962EA172DB00DEC4F4 /* eyeChat */,
+			);
+			name = eyeChat;
+			packageProductDependencies = (
+			);
+			productName = eyeChat;
+			productReference = B38410942EA172DB00DEC4F4 /* eyeChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B38410A02EA172DD00DEC4F4 /* eyeChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B38410B82EA172DD00DEC4F4 /* Build configuration list for PBXNativeTarget "eyeChatTests" */;
+			buildPhases = (
+				B384109D2EA172DD00DEC4F4 /* Sources */,
+				B384109E2EA172DD00DEC4F4 /* Frameworks */,
+				B384109F2EA172DD00DEC4F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B38410A32EA172DD00DEC4F4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B38410A42EA172DD00DEC4F4 /* eyeChatTests */,
+			);
+			name = eyeChatTests;
+			packageProductDependencies = (
+			);
+			productName = eyeChatTests;
+			productReference = B38410A12EA172DD00DEC4F4 /* eyeChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B38410AA2EA172DD00DEC4F4 /* eyeChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B38410BB2EA172DD00DEC4F4 /* Build configuration list for PBXNativeTarget "eyeChatUITests" */;
+			buildPhases = (
+				B38410A72EA172DD00DEC4F4 /* Sources */,
+				B38410A82EA172DD00DEC4F4 /* Frameworks */,
+				B38410A92EA172DD00DEC4F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B38410AD2EA172DD00DEC4F4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B38410AE2EA172DD00DEC4F4 /* eyeChatUITests */,
+			);
+			name = eyeChatUITests;
+			packageProductDependencies = (
+			);
+			productName = eyeChatUITests;
+			productReference = B38410AB2EA172DD00DEC4F4 /* eyeChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B38410C12EA173AE00DEC4F4 /* eyeChat-cli */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B38410C62EA173AE00DEC4F4 /* Build configuration list for PBXNativeTarget "eyeChat-cli" */;
+			buildPhases = (
+				B38410BE2EA173AE00DEC4F4 /* Sources */,
+				B38410BF2EA173AE00DEC4F4 /* Frameworks */,
+				B38410C02EA173AE00DEC4F4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B38410C32EA173AE00DEC4F4 /* eyeChat-cli */,
+			);
+			name = "eyeChat-cli";
+			packageProductDependencies = (
+			);
+			productName = "eyeChat-cli";
+			productReference = B38410C22EA173AE00DEC4F4 /* eyeChat-cli */;
+			productType = "com.apple.product-type.tool";
+		};
+		B38410CC2EA17AB100DEC4F4 /* eyeChatd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B38410D12EA17AB100DEC4F4 /* Build configuration list for PBXNativeTarget "eyeChatd" */;
+			buildPhases = (
+				B38410C92EA17AB100DEC4F4 /* Sources */,
+				B38410CA2EA17AB100DEC4F4 /* Frameworks */,
+				B38410CB2EA17AB100DEC4F4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B38410CE2EA17AB100DEC4F4 /* eyeChatd */,
+			);
+			name = eyeChatd;
+			packageProductDependencies = (
+			);
+			productName = eyeChatd;
+			productReference = B38410CD2EA17AB100DEC4F4 /* eyeChatd */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B384108C2EA172DB00DEC4F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					B38410932EA172DB00DEC4F4 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					B38410A02EA172DD00DEC4F4 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = B38410932EA172DB00DEC4F4;
+					};
+					B38410AA2EA172DD00DEC4F4 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = B38410932EA172DB00DEC4F4;
+					};
+					B38410C12EA173AE00DEC4F4 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					B38410CC2EA17AB100DEC4F4 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+				};
+			};
+			buildConfigurationList = B384108F2EA172DB00DEC4F4 /* Build configuration list for PBXProject "eyeChat" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B384108B2EA172DB00DEC4F4;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B38410952EA172DB00DEC4F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B38410932EA172DB00DEC4F4 /* eyeChat */,
+				B38410C12EA173AE00DEC4F4 /* eyeChat-cli */,
+				B38410CC2EA17AB100DEC4F4 /* eyeChatd */,
+				B38410A02EA172DD00DEC4F4 /* eyeChatTests */,
+				B38410AA2EA172DD00DEC4F4 /* eyeChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B38410922EA172DB00DEC4F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B384109F2EA172DD00DEC4F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38410A92EA172DD00DEC4F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B38410902EA172DB00DEC4F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B384109D2EA172DD00DEC4F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38410A72EA172DD00DEC4F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38410BE2EA173AE00DEC4F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38410C92EA17AB100DEC4F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B38410A32EA172DD00DEC4F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38410932EA172DB00DEC4F4 /* eyeChat */;
+			targetProxy = B38410A22EA172DD00DEC4F4 /* PBXContainerItemProxy */;
+		};
+		B38410AD2EA172DD00DEC4F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38410932EA172DB00DEC4F4 /* eyeChat */;
+			targetProxy = B38410AC2EA172DD00DEC4F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B38410B32EA172DD00DEC4F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = Z2C57S2YDD;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B38410B42EA172DD00DEC4F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = Z2C57S2YDD;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		B38410B62EA172DD00DEC4F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2C57S2YDD;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.brulai.eyeChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B38410B72EA172DD00DEC4F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2C57S2YDD;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.brulai.eyeChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B38410B92EA172DD00DEC4F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2C57S2YDD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.brulai.eyeChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eyeChat.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/eyeChat";
+			};
+			name = Debug;
+		};
+		B38410BA2EA172DD00DEC4F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2C57S2YDD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.brulai.eyeChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eyeChat.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/eyeChat";
+			};
+			name = Release;
+		};
+		B38410BC2EA172DD00DEC4F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2C57S2YDD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.brulai.eyeChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = eyeChat;
+			};
+			name = Debug;
+		};
+		B38410BD2EA172DD00DEC4F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2C57S2YDD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.brulai.eyeChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = eyeChat;
+			};
+			name = Release;
+		};
+		B38410C72EA173AE00DEC4F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z2C57S2YDD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B38410C82EA173AE00DEC4F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z2C57S2YDD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B38410D22EA17AB100DEC4F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z2C57S2YDD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B38410D32EA17AB100DEC4F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z2C57S2YDD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B384108F2EA172DB00DEC4F4 /* Build configuration list for PBXProject "eyeChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38410B32EA172DD00DEC4F4 /* Debug */,
+				B38410B42EA172DD00DEC4F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B38410B52EA172DD00DEC4F4 /* Build configuration list for PBXNativeTarget "eyeChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38410B62EA172DD00DEC4F4 /* Debug */,
+				B38410B72EA172DD00DEC4F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B38410B82EA172DD00DEC4F4 /* Build configuration list for PBXNativeTarget "eyeChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38410B92EA172DD00DEC4F4 /* Debug */,
+				B38410BA2EA172DD00DEC4F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B38410BB2EA172DD00DEC4F4 /* Build configuration list for PBXNativeTarget "eyeChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38410BC2EA172DD00DEC4F4 /* Debug */,
+				B38410BD2EA172DD00DEC4F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B38410C62EA173AE00DEC4F4 /* Build configuration list for PBXNativeTarget "eyeChat-cli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38410C72EA173AE00DEC4F4 /* Debug */,
+				B38410C82EA173AE00DEC4F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B38410D12EA17AB100DEC4F4 /* Build configuration list for PBXNativeTarget "eyeChatd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38410D22EA17AB100DEC4F4 /* Debug */,
+				B38410D32EA17AB100DEC4F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B384108C2EA172DB00DEC4F4 /* Project object */;
+}
