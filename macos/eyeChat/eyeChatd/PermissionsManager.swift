@@ -20,7 +20,7 @@ final class PermissionsManager {
 
     func ensureMicrophoneAccess() async -> Bool {
         await withCheckedContinuation { continuation in
-            AVAudioSession.sharedInstance().requestRecordPermission { granted in
+            AVCaptureDevice.requestAccess(for: .audio) { granted in
                 continuation.resume(returning: granted)
             }
         }
