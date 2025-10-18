@@ -4,30 +4,19 @@
 //
 //  Created by Bruno Pinto on 16/10/2025.
 //
-
 import Dispatch
 import Foundation
 
-@main
-struct EyeChatCLI {
-    static func main() {
-        let runner = CLIRunner()
-        runner.run()
-    }
-}
-
-private final class CLIRunner {
+final class CLIRunner {
     private let speech = SpeechOutputManager.shared
     private let inputQueue = DispatchQueue(label: "io.eyeChat.cli.input", qos: .userInteractive)
 
-    func run() -> Never {
+    func start() {
         speech.speak("eyeChat CLI ready. Type commands, or 'speech on', 'speech off', 'stop', 'exit'.")
 
-        inputQueue.async { [unowned self] in
-            processInputLoop()
+        inputQueue.async { [weak self] in
+            self?.processInputLoop()
         }
-
-        dispatchMain()
     }
 
     private func processInputLoop() {
@@ -62,3 +51,7 @@ private final class CLIRunner {
         }
     }
 }
+
+let cliRunner = CLIRunner()
+cliRunner.start()
+dispatchMain()
