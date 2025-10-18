@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B3F61B4B2EA3AB270061E781 /* Accessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D67FB32EA3A7A600DE49E9 /* Accessibility.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		B38410A22EA172DD00DEC4F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -114,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F61B4B2EA3AB270061E781 /* Accessibility.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
