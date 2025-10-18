@@ -8,20 +8,19 @@
 import ApplicationServices
 import Foundation
 
+@main
 struct EyeChatDaemon {
     static func main() {
         let permissionsManager = PermissionsManager.shared
 
         if !permissionsManager.ensureAccessibilityTrusted() {
-            print("Waiting for Accessibility permission...")
+            SpeechOutputManager.shared.speak("Waiting for Accessibility permission...")
             while !AXIsProcessTrusted() {
                 sleep(3)
             }
         }
 
-        let successMessage = "Accessibility permission granted. eyeChat ready."
-        print(successMessage)
-        SpeechOutputManager.shared.speak(successMessage)
+        SpeechOutputManager.shared.speak("Accessibility permission granted. eyeChat ready.")
 
         // Continue daemon initialization...
     }

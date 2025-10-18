@@ -21,7 +21,6 @@ enum AccessibilityPermission {
 
         if !trustedAfterPrompt {
             let guidance = "Accessibility permission required. Please open System Settings, Privacy and Security, Accessibility, and enable eyeChat."
-            print(guidance)
             SpeechOutputManager.shared.speak(guidance)
         }
 
