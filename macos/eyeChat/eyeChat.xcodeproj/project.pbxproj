@@ -133,6 +133,7 @@
 				B38410AE2EA172DD00DEC4F4 /* eyeChatUITests */,
 				B38410C32EA173AE00DEC4F4 /* eyeChat-cli */,
 				B38410CE2EA17AB100DEC4F4 /* eyeChatd */,
+				B3D680042EA3B12300DE49E9 /* Shared */,
 				B3D67FB22EA3A7A600DE49E9 /* Frameworks */,
 				B38410952EA172DB00DEC4F4 /* Products */,
 			);
@@ -158,6 +159,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B3D680042EA3B12300DE49E9 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,6 +181,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				B38410962EA172DB00DEC4F4 /* eyeChat */,
+				B3D680042EA3B12300DE49E9 /* Shared */,
 			);
 			name = eyeChat;
 			packageProductDependencies = (
@@ -243,6 +250,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				B38410C32EA173AE00DEC4F4 /* eyeChat-cli */,
+				B3D680042EA3B12300DE49E9 /* Shared */,
 			);
 			name = "eyeChat-cli";
 			packageProductDependencies = (
@@ -265,6 +273,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				B38410CE2EA17AB100DEC4F4 /* eyeChatd */,
+				B3D680042EA3B12300DE49E9 /* Shared */,
 			);
 			name = eyeChatd;
 			packageProductDependencies = (
