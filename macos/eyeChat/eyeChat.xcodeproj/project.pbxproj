@@ -50,6 +50,7 @@
 		B38410AB2EA172DD00DEC4F4 /* eyeChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eyeChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38410C22EA173AE00DEC4F4 /* eyeChat-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "eyeChat-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38410CD2EA17AB100DEC4F4 /* eyeChatd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = eyeChatd; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3D67FB32EA3A7A600DE49E9 /* Accessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accessibility.framework; path = System/Library/Frameworks/Accessibility.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -127,6 +128,7 @@
 				B38410AE2EA172DD00DEC4F4 /* eyeChatUITests */,
 				B38410C32EA173AE00DEC4F4 /* eyeChat-cli */,
 				B38410CE2EA17AB100DEC4F4 /* eyeChatd */,
+				B3D67FB22EA3A7A600DE49E9 /* Frameworks */,
 				B38410952EA172DB00DEC4F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -141,6 +143,14 @@
 				B38410CD2EA17AB100DEC4F4 /* eyeChatd */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B3D67FB22EA3A7A600DE49E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3D67FB32EA3A7A600DE49E9 /* Accessibility.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -679,8 +689,8 @@
 		B38410D22EA17AB100DEC4F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z2C57S2YDD;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -698,8 +708,8 @@
 		B38410D32EA17AB100DEC4F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z2C57S2YDD;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
