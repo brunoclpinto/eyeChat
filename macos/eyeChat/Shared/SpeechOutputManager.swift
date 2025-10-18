@@ -24,14 +24,23 @@ final class SpeechOutputManager {
 
         guard enabled else { return }
 
-        let utterance = AVSpeechUtterance(string: text)
+        let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+
+        let utterance = AVSpeechUtterance(string: trimmed)
         utterance.rate = 0.5
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        synthesizer.speak(utterance)
+        performOnSynthesizer { synth in
+            synth.speak(utterance)
+        }
     }
 
     func stop() {
-        synthesizer.stopSpeaking(at: .immediate)
+        performOnSynthesizer { synth in
+            if synth.isSpeaking {
+                synth.stopSpeaking(at: .immediate)
+            }
+        }
     }
 
     func toggleSpeech(_ enabled: Bool) {
@@ -44,11 +53,21 @@ final class SpeechOutputManager {
         if enabled {
             speak("Speech output enabled.")
         } else {
-            synthesizer.stopSpeaking(at: .immediate)
+            stop()
         }
     }
 
     func isSpeechEnabled() -> Bool {
         enabled
+    }
+
+    private func performOnSynthesizer(_ action: @escaping (AVSpeechSynthesizer) -> Void) {
+        if Thread.isMainThread {
+            action(synthesizer)
+        } else {
+            DispatchQueue.main.async {
+                action(self.synthesizer)
+            }
+        }
     }
 }

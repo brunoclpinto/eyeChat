@@ -5,30 +5,60 @@
 //  Created by Bruno Pinto on 16/10/2025.
 //
 
+import Dispatch
 import Foundation
 
-func runCLI() {
-    let speech = SpeechOutputManager.shared
-    speech.speak("eyeChat CLI ready. Type commands, or 'speech on', 'speech off', 'stop', 'exit'.")
+@main
+struct EyeChatCLI {
+    static func main() {
+        let runner = CLIRunner()
+        runner.run()
+    }
+}
 
-    while let line = readLine(strippingNewline: true) {
-        let trimmed = line.trimmingCharacters(in: .whitespacesAndNewlines)
+private final class CLIRunner {
+    private let speech = SpeechOutputManager.shared
+    private let inputQueue = DispatchQueue(label: "io.eyeChat.cli.input", qos: .userInteractive)
+
+    func run() -> Never {
+        speech.speak("eyeChat CLI ready. Type commands, or 'speech on', 'speech off', 'stop', 'exit'.")
+
+        inputQueue.async { [unowned self] in
+            processInputLoop()
+        }
+
+        dispatchMain()
+    }
+
+    private func processInputLoop() {
+        while let line = readLine(strippingNewline: true) {
+            handleCommand(line)
+        }
+
+        DispatchQueue.main.async {
+            self.speech.speak("Input closed. eyeChat CLI exiting.")
+            exit(EXIT_SUCCESS)
+        }
+    }
+
+    private func handleCommand(_ raw: String) {
+        let trimmed = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+
         switch trimmed.lowercased() {
         case "exit", "quit":
             speech.speak("Goodbye.")
-            return
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                exit(EXIT_SUCCESS)
+            }
         case "speech on":
             speech.toggleSpeech(true)
         case "speech off":
             speech.toggleSpeech(false)
         case "stop":
             speech.stop()
-        case "":
-            continue
         default:
             speech.speak(trimmed)
         }
     }
 }
-
-runCLI()
