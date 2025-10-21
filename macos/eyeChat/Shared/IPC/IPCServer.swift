@@ -64,7 +64,7 @@ final class IPCServer {
         listenSource = source
         source.resume()
 
-        IPCLogger.log("IPCServer started on \(IPCConstants.socketPath)")
+        IPCLogger.log("IPCServer started on \(IPCConstants.socketPath)", category: "server")
     }
 
     func stop() {
@@ -86,7 +86,7 @@ final class IPCServer {
         }
 
         unlink(IPCConstants.socketPath)
-        IPCLogger.log("IPCServer stopped")
+        IPCLogger.log("IPCServer stopped", category: "server")
     }
 
     private func removeStaleSocket() throws {
@@ -162,7 +162,7 @@ final class IPCServer {
                     break
                 }
 
-                IPCLogger.log("Accept failed: \(errno)")
+                IPCLogger.log("Accept failed: \(errno)", category: "server")
                 break
             }
 
@@ -171,7 +171,7 @@ final class IPCServer {
                 try validatePeer(fd: clientFD)
                 attachClient(fd: clientFD)
             } catch {
-                IPCLogger.log("Rejected client: \(error)")
+                IPCLogger.log("Rejected client: \(error)", category: "server")
                 close(clientFD)
             }
         }
@@ -209,7 +209,7 @@ final class IPCServer {
         }
 
         source.resume()
-        IPCLogger.log("Accepted client fd \(fd)")
+        IPCLogger.log("Accepted client fd \(fd)", category: "server")
     }
 
     private func handleReadableClient(_ context: ClientContext) {
@@ -217,14 +217,14 @@ final class IPCServer {
         let bytesRead = read(context.fd, &buffer, buffer.count)
 
         if bytesRead == 0 {
-            IPCLogger.log("Client fd \(context.fd) closed")
+        IPCLogger.log("Client fd \(context.fd) closed", category: "server")
             removeClient(context)
             return
         }
 
         if bytesRead < 0 {
             if errno != EWOULDBLOCK && errno != EAGAIN {
-                IPCLogger.log("Read failed for fd \(context.fd): \(errno)")
+                IPCLogger.log("Read failed for fd \(context.fd): \(errno)", category: "server")
                 removeClient(context)
             }
             return
@@ -240,18 +240,18 @@ final class IPCServer {
             }
 
             for message in messages {
-                IPCLogger.log("Server received: \(message.command.rawValue) from \(message.sender)")
+                IPCLogger.log("Server received: \(message.command.rawValue) from \(message.sender)", category: "server")
                 let response = router.handle(message: message)
                 try send(response, to: context)
 
                 if response.shouldCloseConnection {
-                    IPCLogger.log("Closing client fd \(context.fd) on request.")
+                    IPCLogger.log("Closing client fd \(context.fd) on request.", category: "server")
                     removeClient(context)
                     break
                 }
             }
         } catch {
-            IPCLogger.log("Failed to decode message from fd \(context.fd): \(error)")
+            IPCLogger.log("Failed to decode message from fd \(context.fd): \(error)", category: "server")
             removeClient(context)
         }
     }
@@ -267,7 +267,7 @@ final class IPCServer {
             throw IPCError.socketSendFailed(errno: errno)
         }
 
-        IPCLogger.log("Server sent response for \(message.command.rawValue)")
+        IPCLogger.log("Server sent response for \(message.command.rawValue)", category: "server")
     }
 
     private func removeClient(_ context: ClientContext) {

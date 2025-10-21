@@ -45,7 +45,7 @@ final class IPCClient {
                 try self.performConnect()
                 self.setupReadSource()
                 self.connected = true
-                IPCLogger.log("IPCClient connected to \(IPCConstants.socketPath)")
+                IPCLogger.log("IPCClient connected to \(IPCConstants.socketPath)", category: "client")
                 self.callbackQueue.async { [weak self] in
                     self?.onConnect?()
                 }
@@ -74,7 +74,7 @@ final class IPCClient {
                     throw IPCError.socketSendFailed(errno: errno)
                 }
 
-                IPCLogger.log("IPCClient sent \(message.command.rawValue)")
+                IPCLogger.log("IPCClient sent \(message.command.rawValue)", category: "client")
             } catch {
                 self.emitError(error)
             }
@@ -174,7 +174,7 @@ final class IPCClient {
             let messages = try IPCCodec.decodeMessages(from: &pending)
             self.buffer = pending
             messages.forEach { message in
-                IPCLogger.log("IPCClient received \(message.command.rawValue) response")
+                IPCLogger.log("IPCClient received \(message.command.rawValue) response", category: "client")
                 callbackQueue.async { [weak self] in
                     self?.onMessage?(message)
                 }
@@ -185,7 +185,7 @@ final class IPCClient {
     }
 
     private func emitError(_ error: Error) {
-        IPCLogger.log("IPCClient error: \(error)")
+        IPCLogger.log("IPCClient error: \(error)", category: "client")
         callbackQueue.async { [weak self] in
             self?.onError?(error)
         }

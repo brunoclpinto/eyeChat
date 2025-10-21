@@ -38,7 +38,7 @@ enum IPCCodec {
                 let message = try decoder.decode(IPCMessage.self, from: frame)
                 messages.append(message)
             } catch {
-                IPCLogger.log("Decode error: \(error.localizedDescription)")
+                IPCLogger.log("Decode error: \(error.localizedDescription)", category: "codec")
                 throw IPCError.invalidMessage
             }
         }

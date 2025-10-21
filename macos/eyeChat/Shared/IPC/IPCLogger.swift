@@ -10,10 +10,10 @@ import Foundation
 enum IPCLogger {
     private static let queue = DispatchQueue(label: "io.eyeChat.ipc.logger")
 
-    static func log(_ message: String) {
+    static func log(_ message: String, category: String = "general") {
         queue.async {
             let timestamp = ISO8601DateFormatter().string(from: Date())
-            let line = "[\(timestamp)] \(message)\n"
+            let line = "[\(timestamp)] [\(category)] \(message)\n"
 
             guard let data = line.data(using: .utf8) else {
                 return

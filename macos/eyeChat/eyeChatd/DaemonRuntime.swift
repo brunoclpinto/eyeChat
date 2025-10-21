@@ -23,7 +23,7 @@ final class EyeChatDaemonRuntime {
             try server.start()
         } catch {
             SpeechOutputManager.shared.speak("Failed to start IPC server: \(error)")
-            IPCLogger.log("Fatal: \(error)")
+            IPCLogger.log("Fatal: \(error)", category: "daemon")
             exit(EXIT_FAILURE)
         }
 
@@ -47,7 +47,7 @@ final class EyeChatDaemonRuntime {
 
     private func installSignalHandlers() {
         let stopHandler: (Int32) -> Void = { [weak self] signal in
-            IPCLogger.log("Received signal \(signal). Shutting down.")
+            IPCLogger.log("Received signal \(signal). Shutting down.", category: "daemon")
             self?.shutdown()
         }
 
