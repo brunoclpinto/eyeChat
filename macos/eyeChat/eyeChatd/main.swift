@@ -10,18 +10,11 @@ import Foundation
 
 @main
 struct EyeChatDaemon {
+    private static var runtime: EyeChatDaemonRuntime?
+
     static func main() {
-        let permissionsManager = PermissionsManager.shared
-
-        if !permissionsManager.ensureAccessibilityTrusted() {
-            SpeechOutputManager.shared.speak("Waiting for Accessibility permission...")
-            while !AXIsProcessTrusted() {
-                sleep(3)
-            }
-        }
-
-        SpeechOutputManager.shared.speak("Accessibility permission granted. eyeChat ready.")
-
-        // Continue daemon initialization...
+        runtime = EyeChatDaemonRuntime()
+        runtime?.start()
+        dispatchMain()
     }
 }
