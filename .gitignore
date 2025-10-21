@@ -30,6 +30,7 @@ Build/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+macos/eyeChat/eyeChat.xcodeproj/xcuserdata/
 *.xccheckout
 *.moved-aside
 *.xcuserstate
