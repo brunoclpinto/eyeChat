@@ -27,11 +27,10 @@ struct ContentView: View {
                 .background(Color(NSColor.textBackgroundColor))
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .padding(.horizontal)
-                .onChange(of: viewModel.messages.count) { _ in
-                    if let last = viewModel.messages.last {
-                        withAnimation {
-                            proxy.scrollTo(last.id, anchor: .bottom)
-                        }
+                .onChange(of: viewModel.messages.count) { oldValue, newValue in
+                    guard newValue > oldValue, let last = viewModel.messages.last else { return }
+                    withAnimation {
+                        proxy.scrollTo(last.id, anchor: .bottom)
                     }
                 }
             }
@@ -57,37 +56,40 @@ struct ContentView: View {
             .padding()
         }
         .padding(.vertical)
-        .onAppear {
+        .task {
             viewModel.start()
-        }
-        .onDisappear {
-            viewModel.stop()
         }
     }
 
     @ViewBuilder
     private func messageView(_ message: EyeChatViewModel.ChatMessage) -> some View {
-        let background: Color
-        let alignment: Alignment
-        switch message.role {
-        case .user:
-            background = Color.accentColor.opacity(0.2)
-            alignment = .trailing
-        case .daemon:
-            background = Color.blue.opacity(0.15)
-            alignment = .leading
-        case .system:
-            background = Color.gray.opacity(0.1)
-            alignment = .leading
-        }
+        let configuration = bubbleConfiguration(for: message.role)
 
         HStack {
-            if alignment == .trailing { Spacer(minLength: 24) }
+            if configuration.isTrailingAligned {
+                Spacer(minLength: 24)
+            }
+
             Text(message.text)
                 .padding(10)
-                .background(background)
+                .background(configuration.backgroundColor)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
-            if alignment == .leading { Spacer(minLength: 24) }
+
+            if !configuration.isTrailingAligned {
+                Spacer(minLength: 24)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: configuration.isTrailingAligned ? .trailing : .leading)
+    }
+
+    private func bubbleConfiguration(for role: EyeChatViewModel.MessageRole) -> (backgroundColor: Color, isTrailingAligned: Bool) {
+        switch role {
+        case .user:
+            return (Color.accentColor.opacity(0.2), true)
+        case .daemon:
+            return (Color.blue.opacity(0.15), false)
+        case .system:
+            return (Color.gray.opacity(0.1), false)
         }
     }
 }

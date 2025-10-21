@@ -29,19 +29,24 @@ final class EyeChatViewModel: ObservableObject {
     private let ipcClient = IPCClient(callbackQueue: .main)
     private let speech = SpeechOutputManager.shared
     private var reconnectWorkItem: DispatchWorkItem?
+    private var hasStarted = false
 
     init() {
         configureIPC()
     }
 
     func start() {
+        guard !hasStarted else { return }
+        hasStarted = true
+        IPCLogger.log("GUI start invoked", category: "gui")
         appendSystemMessage("Connecting to eyeChat daemon...")
         ipcClient.connect()
     }
 
     func stop() {
         reconnectWorkItem?.cancel()
-        ipcClient.close()
+        ipcClient.disconnect()
+        hasStarted = false
     }
 
     func sendCurrentInput() {
@@ -63,13 +68,16 @@ final class EyeChatViewModel: ObservableObject {
     private func configureIPC() {
         ipcClient.onConnect = { [weak self] in
             guard let self else { return }
+            IPCLogger.log("GUI connected", category: "gui")
             self.isConnected = true
             self.statusMessage = "Connected."
             self.appendSystemMessage("Connected to eyeChat daemon.")
+            self.scheduleReconnect(cancelOnly: true)
         }
 
         ipcClient.onMessage = { [weak self] message in
             guard let self else { return }
+            IPCLogger.log("GUI received message: \(message.command.rawValue)", category: "gui")
 
             if let text = message.response?["text"]?.stringValue {
                 self.appendDaemonMessage(text)
@@ -84,6 +92,8 @@ final class EyeChatViewModel: ObservableObject {
 
         ipcClient.onError = { [weak self] error in
             guard let self else { return }
+            IPCLogger.log("GUI error: \(error)", category: "gui")
+            self.isConnected = false
             self.statusMessage = "Daemon unavailable. Retrying..."
             self.appendSystemMessage("Daemon not running. Start eyeChatd first.")
             self.scheduleReconnect()
@@ -91,6 +101,7 @@ final class EyeChatViewModel: ObservableObject {
 
         ipcClient.onDisconnect = { [weak self] in
             guard let self else { return }
+            IPCLogger.log("GUI disconnected", category: "gui")
             self.isConnected = false
             self.statusMessage = "Lost connection. Reconnecting..."
             self.appendSystemMessage("Lost connection to eyeChat daemon. Attempting to reconnect.")
@@ -111,9 +122,15 @@ final class EyeChatViewModel: ObservableObject {
         speech.speak(text)
     }
 
-    private func scheduleReconnect() {
+    private func scheduleReconnect(cancelOnly: Bool = false) {
         reconnectWorkItem?.cancel()
+        guard !cancelOnly else {
+            reconnectWorkItem = nil
+            return
+        }
+
         let item = DispatchWorkItem { [weak self] in
+            IPCLogger.log("GUI attempting reconnect", category: "gui")
             self?.ipcClient.connect()
         }
         reconnectWorkItem = item

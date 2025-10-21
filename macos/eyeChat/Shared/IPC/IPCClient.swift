@@ -83,18 +83,26 @@ final class IPCClient {
 
     func close() {
         queue.async {
-            guard self.socketFD != -1 else { return }
+            self.disconnectLocked()
+        }
+    }
 
-            let fd = self.socketFD
-            self.socketFD = -1
-            self.connected = false
+    func disconnect() {
+        queue.async {
+            self.disconnectLocked()
+        }
+    }
 
-            if let source = self.readSource {
-                self.readSource = nil
-                source.cancel()
-            } else {
-                Darwin.close(fd)
-            }
+    private func disconnectLocked() {
+        let fd = socketFD
+        socketFD = -1
+        connected = false
+
+        if let source = readSource {
+            readSource = nil
+            source.cancel()
+        } else if fd != -1 {
+            Darwin.close(fd)
         }
     }
 
