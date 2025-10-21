@@ -52,6 +52,11 @@ final class CLIRunner {
     }
 }
 
-let cliRunner = CLIRunner()
-cliRunner.start()
-dispatchMain()
+@main
+struct EyeChatCLI {
+    static func main() {
+        let cliRunner = CLIRunner()
+        cliRunner.start()
+        dispatchMain()
+    }
+}
